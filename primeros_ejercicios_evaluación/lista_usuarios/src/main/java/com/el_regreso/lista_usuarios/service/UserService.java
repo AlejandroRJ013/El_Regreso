@@ -11,13 +11,6 @@ public class UserService {
     private List<User> users = new ArrayList<>();
     private Long currentId = 1L;
 
-    public UserService() {
-        users.add(new User(1L, "Alice", "alice@example.com"));
-        users.add(new User(2L, "Bob", "bob@example.com"));
-        users.add(new User(3L, "Juan", "juan@example.com"));
-        users.add(new User(4L, "Ana", "ana@example.com"));
-    }
-
     public List<User> getAllUsers() {
         return users;
     }
