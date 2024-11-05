@@ -1,13 +1,13 @@
-package com.lista_usuarios.ejercicio02;
+package com.el_regreso.lista_usuarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ejercicio02Application {
+public class ListaUsuariosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ejercicio02Application.class, args);
+		SpringApplication.run(ListaUsuariosApplication.class, args);
 	}
 
 }

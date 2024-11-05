@@ -1,10 +1,10 @@
-package com.lista_usuarios.ejercicio02;
+package com.el_regreso.lista_usuarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ejercicio02ApplicationTests {
+class ListaUsuariosApplicationTests {
 
 	@Test
 	void contextLoads() {
