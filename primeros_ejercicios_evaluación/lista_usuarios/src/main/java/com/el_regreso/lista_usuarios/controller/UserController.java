@@ -32,8 +32,10 @@ public class UserController {
 
     @PostMapping
     public UserDTO createUser(@Valid @RequestBody UserDTO userDTO) {
+        System.out.println("Creando usuario con nombre: " + userDTO.getNombre() + " y email: " + userDTO.getEmail());
         User user = convertDtoToUser(userDTO);
         User createdUser = userService.createUser(user);
+        System.out.println("Creado");
         return convertUserToDto(createdUser);
     }
 
