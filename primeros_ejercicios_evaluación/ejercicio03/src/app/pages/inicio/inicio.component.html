@@ -1,0 +1,56 @@
+<div class="botones">
+  <ul class="contenedor_botones">
+    <li alt="GET/{id}">
+      <a routerLink="buscar-usuario">
+        <img src="getUserById.png" alt="Buscar un usuario"
+      /></a>
+    </li>
+    <li alt="POST">
+      <a routerLink="crear-usuario">
+        <img src="postUser.png" alt="Crear un usuario"
+      /></a>
+    </li>
+    <li alt="PUT">
+      <a routerLink="actualizar-usuario">
+        <img src="putUserById.png" alt="Actualizar un usuario"
+      /></a>
+    </li>
+    <li alt="DELETE">
+      <a routerLink="eliminar-usuario">
+        <img src="deleteUserById.png" alt="Eliminar un usuario"
+      /></a>
+    </li>
+  </ul>
+</div>
+
+<div class="tabla_contenedor">
+  <table class="marco_usuarios">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th><img src="actualizar.png" alt="Libreta con un lápiz" /></th>
+        <th><img src="basura.png" alt="Bote de basura" /></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- NG FOR PARA LISTAR USUARIOS -->
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.nombre }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <a href="">
+            <img src="actualizar.png" alt="Libreta con un lápiz" width="25" />
+          </a>
+        </td>
+        <td>
+          <a href="">
+            <img src="basura.png" alt="Bote de basura" width="25" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

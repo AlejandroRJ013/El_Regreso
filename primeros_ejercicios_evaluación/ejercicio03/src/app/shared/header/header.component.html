@@ -1,0 +1,16 @@
+<header>
+  <div [ngClass]="isHome ? 'encabezado' : 'encabezado-noHome'">
+    <div id="inicio" [ngClass]="isHome ? 'ocultar' : ''" class="boton_inicio">
+      <a routerLink="inicio">
+        <img src="casa.png" alt="Icono de una casa, dirige al inicio" />
+      </a>
+    </div>
+    <div class="titulo">
+      <h1>Lista de usuarios</h1>
+      <h2>Ejercicio03</h2>
+    </div>
+    <aside class="subtitulo">
+      <h2>Consumición de la API REST del ejercicio02</h2>
+    </aside>
+  </div>
+</header>

@@ -1,0 +1,67 @@
+label[for="id"] {
+  grid-area: label-id;
+}
+
+input#id {
+  grid-area: id;
+}
+
+label[for="nombre"] {
+  grid-area: label-nombre;
+}
+
+input#nombre {
+  grid-area: nombre;
+}
+
+label[for="email"] {
+  grid-area: label-email;
+}
+
+input#email {
+  grid-area: email;
+}
+
+input[type="submit"] {
+  grid-area: submit;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+
+  img {
+    width: 20%;
+  }
+
+  form {
+    width: 50%;
+    display: grid;
+    align-items: center;
+    grid-template:
+      "label-id label-id id id id" auto
+      "label-nombre label-nombre nombre nombre nombre" auto
+      "label-email label-email email email email" auto
+      ". . . . ." 10px
+      ". submit submit submit ." 20px / 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1em;
+
+    label {
+      justify-self: center;
+      font: large Verdana;
+    }
+
+    input {
+      padding: 0.5em;
+      text-align: center;
+      font: medium Verdana;
+    }
+
+    #submit {
+      background-color: gray;
+      border-radius: 10px;
+    }
+  }
+}

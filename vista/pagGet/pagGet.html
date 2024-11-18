@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Buscar un usuario por su ID</title>
+    <link rel="stylesheet" href="pagGet.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <h1>Lista de usuarios</h1>
+      <div>
+        <h2>Ejercicio03</h2>
+      </div>
+      <h2>Consumición de la API REST del ejercicio02</h2>
+    </header>
+    <div class="body">
+      <div class="izq">
+        <p>Ingrese el ID del usuario para buscarlo</p>
+        <div class="buscador">
+          <input type="number" id="userId" name="userId" list="userIds" />
+          <datalist id="userIds">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+          </datalist>
+
+          <button onclick="getUsuarioById()">
+            <img src="../img/lupa.png" alt="Lupa" />
+          </button>
+        </div>
+      </div>
+      <div class="der">
+        <div class="carta">
+          <p id="id">1</p>
+          <img
+            src="../img/usuario_chess.png"
+            alt="Foto predeterminada de usuario"
+          />
+          <h1 id="nombre">Juan</h1>
+          <h2 class="email">Dirección de correo:</h2>
+          <h2 id="email">juan@example.com</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

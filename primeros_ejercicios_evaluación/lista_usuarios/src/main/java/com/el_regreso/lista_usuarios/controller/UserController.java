@@ -10,13 +10,18 @@ import jakarta.validation.Valid;
 import com.el_regreso.lista_usuarios.dto.UserDTO;
 import com.el_regreso.lista_usuarios.model.User;
 import com.el_regreso.lista_usuarios.service.UserService;
+import com.el_regreso.lista_usuarios.repository.UserRepository;
 
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping
     public List<UserDTO> getAllUsers() {
@@ -28,6 +33,11 @@ public class UserController {
     public UserDTO getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
         return convertUserToDto(user);
+    }
+
+    @GetMapping("/next-id")
+    public Integer getNextId() {
+        return userRepository.findNextId();
     }
 
     @PostMapping

@@ -1,0 +1,78 @@
+header {
+  background-color: cadetblue;
+  border-bottom: 5px solid black;
+  .encabezado {
+    padding-inline: 5em;
+    padding-block: 0.5em;
+    display: block;
+    div {
+      border-bottom: 2px solid darkgray;
+      h2 {
+        margin: 5;
+        font: bold large "Courier New";
+      }
+    }
+    h2 {
+      margin: 5 5 15 5;
+      font: bold larger "Courier New";
+      text-align: center;
+    }
+    h1 {
+      margin: 10;
+      text-align: center;
+      font: bold larger "Courier New";
+    }
+  }
+
+  .encabezado-noHome {
+    display: grid;
+    grid-template:
+      "boton encabezado encabezado" 70px
+      ". encabezado encabezado" auto
+      "subtitulo subtitulo subtitulo" auto / 75px 50% 40%;
+    .boton_inicio {
+      grid-area: boton;
+    }
+    div:nth-child(2) {
+      grid-area: encabezado;
+      border-bottom: 2px solid darkgray;
+      h1 {
+        text-align: start;
+        font: bold large "Courier New";
+      }
+      h2 {
+        font: bold medium "Courier New";
+        margin: 0;
+      }
+    }
+    aside {
+      grid-area: subtitulo;
+      font: bold x-small "Courier New";
+      text-align: center;
+    }
+  }
+}
+
+.boton_inicio {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 55px;
+  aspect-ratio: 1 / 1;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 10px;
+  a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 35px;
+  }
+}
+
+.ocultar {
+  display: none;
+}

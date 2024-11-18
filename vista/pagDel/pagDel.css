@@ -1,0 +1,152 @@
+/* Quitar las flechas en Chrome, Safari, Edge y Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label[for="id"] {
+  grid-area: label-id;
+}
+
+input#id {
+  grid-area: id;
+}
+
+label[for="nombre"] {
+  grid-area: label-nombre;
+}
+
+input#nombre {
+  grid-area: nombre;
+}
+
+label[for="email"] {
+  grid-area: label-email;
+}
+
+input#email {
+  grid-area: email;
+}
+
+input[type="submit"] {
+  grid-area: submit;
+}
+
+body {
+  margin: 0;
+}
+
+.encabezado {
+  background-color: cadetblue;
+  padding-inline: 5em;
+  padding-block: 0.5em;
+  display: block;
+  border-bottom: 5px solid black;
+
+  div {
+    border-bottom: 2px solid darkgray;
+
+    h2 {
+      margin: 5;
+    }
+  }
+
+  h2 {
+    margin: 5 5 15 5;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 10;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
+
+.texto_buscador {
+  text-align: center;
+  font: bold large Verdana;
+  padding-bottom: 1em;
+  border-bottom: 1px solid;
+  .buscador {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    border-radius: 20px;
+    border: 1px solid;
+    overflow: hidden;
+
+    input {
+      padding: 0.5em;
+      margin: 0;
+      width: 80%;
+      text-align: center;
+      font: medium Verdana;
+      outline: none;
+      border: 0;
+    }
+
+    /* Estilo de las opciones de datalist en algunos navegadores */
+    option {
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    button {
+      border: 0;
+      width: 20%;
+      aspect-ratio: 3/1;
+      padding: 0.5em;
+      margin: 0;
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.formulario_imagen {
+  margin-top: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 30%;
+  }
+
+  form {
+    width: 50%;
+    display: grid;
+    align-items: center;
+    grid-template:
+      "label-id label-id id id id" auto
+      "label-nombre label-nombre nombre nombre nombre" auto
+      "label-email label-email email email email" auto
+      ". . . . ." 10px
+      ". submit submit submit ." 20px / 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1em;
+
+    label {
+      justify-self: center;
+      font: large Verdana;
+    }
+
+    input {
+      padding: 0.5em;
+      text-align: center;
+      font: medium Verdana;
+    }
+
+    #submit {
+      background-color: rgb(191, 53, 53);
+      border-radius: 10px;
+      margin-top: 20;
+    }
+  }
+}

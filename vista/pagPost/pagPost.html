@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Crear un usuario</title>
+    <link rel="stylesheet" href="pagPost.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <h1>Lista de usuarios</h1>
+      <div>
+        <h2>Ejercicio03</h2>
+      </div>
+      <h2>Consumición de la API REST del ejercicio02</h2>
+    </header>
+    <div class="body">
+      <img
+        src="../img/usuario_chess.png"
+        alt="Foto predeterminada de usuario"
+      />
+      <form action="index.php" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" value="Conseguir valor" />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <input type="submit" id="submit" value="Crear usuario" />
+      </form>
+    </div>
+  </body>
+</html>

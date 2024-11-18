@@ -3,12 +3,16 @@ package com.el_regreso.lista_usuarios.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "lista_usuarios")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
     private String nombre;
+
+    @Column(nullable = false)
     private String email;
 
     public User() {

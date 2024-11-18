@@ -1,0 +1,44 @@
+.pieDePagina {
+  padding-block: 1em;
+  position: static;
+  border-top: 3px solid rgb(102, 101, 101);
+  background-color: gray;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  > div {
+    width: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .dev,
+  .func {
+    height: 50%;
+    border: 1px solid gray;
+    p:nth-child(1) {
+      font-weight: bold;
+      font-size: large;
+      width: 50%;
+      border-bottom: 1px solid rgb(79, 79, 79);
+    }
+    p:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+  .lang,
+  .fwk,
+  .db {
+    height: 33.1%;
+    text-align: center;
+    border: 1px solid gray;
+    p:nth-child(1) {
+      font-weight: bold;
+      font-size: large;
+      width: 50%;
+      margin: 5px auto;
+      border-bottom: 1px solid rgb(79, 79, 79);
+    }
+    p:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}

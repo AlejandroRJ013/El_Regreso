@@ -1,0 +1,87 @@
+.botones {
+  display: flex;
+  justify-content: center;
+  .contenedor_botones {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-radius: 15px;
+    border: 3px solid rgb(61, 61, 61);
+    width: min(700px, 70%);
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(107, 105, 105);
+    li {
+      border-radius: 25%;
+      background: #a9a9a9;
+      box-shadow: inset 2.5px 2.5px 10px #909090,
+        inset -2.5px -2.5px 10px #c2c2c2;
+      list-style: none;
+      width: 50px;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: block;
+      }
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.tabla_contenedor {
+  max-height: 270px;
+  overflow-y: auto;
+  border: 5px solid black;
+  border-radius: 10px;
+  width: min(800px, 80%);
+  margin-inline: auto;
+  margin-bottom: 5em;
+  .marco_usuarios {
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+    thead {
+      position: sticky;
+      top: 0;
+    }
+    img {
+      width: 25px;
+    }
+    th,
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    th {
+      font-size: larger;
+      background-color: #ddd;
+    }
+    td {
+      font-size: medium;
+    }
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(4),
+    td:nth-child(4),
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 5%;
+    }
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 30%;
+      text-align: start;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 60%;
+      text-align: start;
+    }
+  }
+}

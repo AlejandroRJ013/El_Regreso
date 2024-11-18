@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+}
+
+.encabezado {
+  background-color: cadetblue;
+  padding-inline: 5em;
+  padding-block: 0.5em;
+  display: block;
+  border-bottom: 5px solid black;
+  div {
+    border-bottom: 2px solid darkgray;
+    h2 {
+      margin: 5;
+      font-size: 1.8em;
+    }
+  }
+  h2 {
+    margin: 5 5 15 5;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
+  h1 {
+    margin: 10;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  .contenedor_botones {
+    margin: 20 0;
+    padding: 15 0;
+    border-radius: 15px;
+    border: 3px solid rgb(61, 61, 61);
+    width: min(700px, 70%);
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(107, 105, 105);
+    li {
+      border-radius: 25%;
+      background: #a9a9a9;
+      box-shadow: inset 2.5px 2.5px 10px #909090,
+        inset -2.5px -2.5px 10px #c2c2c2;
+      list-style: none;
+      width: 50px;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: block;
+      }
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.marco_usuarios {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: min(800px, 80%);
+  height: 250px;
+  margin: 0 auto;
+  border-spacing: 0;
+  thead {
+    display: grid;
+    grid-template-rows: 40px;
+    tr > th {
+      font-size: larger;
+      justify-content: center;
+      img {
+        width: 25px;
+      }
+    }
+  }
+  tbody {
+    display: grid;
+    grid-template-rows: 30px;
+    tr > td {
+      font-size: medium;
+    }
+  }
+  * > tr {
+    display: grid;
+    grid-template-columns: 3fr 9fr 18fr 2fr 2fr;
+    th,
+    td {
+      display: flex;
+      align-items: center;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      border: 1px solid black;
+    }
+  }
+}
+
+/* .lista_usuarios {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: min(800px, 80%);
+  height: 250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr 6fr;
+  grid-template-rows: 40px repeat(auto-fill, 30px);
+  grid-template-areas:
+    "a b c"
+    "a b c";
+}
+
+.borde {
+  border: 1px solid black;
+} */
