@@ -32,7 +32,6 @@ input[type="submit"] {
   grid-area: submit;
 }
 
-
 .body_LR {
   display: grid;
   grid-template-areas:
