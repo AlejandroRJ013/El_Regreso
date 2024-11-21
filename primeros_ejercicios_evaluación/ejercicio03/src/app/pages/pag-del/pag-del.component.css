@@ -1,0 +1,21 @@
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  text-align: center;
+  align-self: center;
+  font: bold large Verdana;
+}
+
+.boton_eliminiar {
+  cursor: pointer;
+  margin: 10px;
+  width: 40%;
+  aspect-ratio: 6/1;
+  border-radius: 20px;
+  background-color: #b81414;
+}

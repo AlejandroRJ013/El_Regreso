@@ -1,0 +1,163 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label[for="id"] {
+  grid-area: label-id;
+}
+
+input#id {
+  grid-area: id;
+}
+
+label[for="nombre"] {
+  grid-area: label-nombre;
+}
+
+input#nombre {
+  grid-area: nombre;
+}
+
+label[for="email"] {
+  grid-area: label-email;
+}
+
+input#email {
+  grid-area: email;
+}
+
+input[type="submit"] {
+  grid-area: submit;
+}
+
+
+.body_LR {
+  display: grid;
+  grid-template-areas:
+    ". . . der der der"
+    "izq izq izq der der der"
+    ". . . der der der";
+  grid-template-columns: 1fr 3fr 1fr 1fr 3fr 1fr;
+  grid-template-rows: auto auto auto;
+  height: 70vh;
+
+  .der {
+    grid-area: der;
+    display: grid;
+    place-items: center;
+  }
+  .izq {
+    grid-area: izq;
+  }
+}
+
+.buscador {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  border-radius: 20px;
+  border: 1px solid;
+  overflow: hidden;
+
+  input {
+    padding: 0.5em;
+    width: 75%;
+    text-align: center;
+    font: medium Verdana;
+    outline: none;
+    border: 0;
+  }
+
+  button {
+    border: 0;
+    width: 25%;
+    aspect-ratio: 3/1;
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: darkgray;
+    &:hover {
+      img {
+        transform: scale(1.15) translate(-10px, 2px);
+      }
+    }
+    img {
+      transition: transform 0.5s ease-in-out;
+      width: 25px;
+    }
+  }
+}
+
+.carta {
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #id {
+    width: 95%;
+    margin: 5px 0 10px;
+    text-align: end;
+    font: bolder medium Verdana;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  #nombre {
+    font: bold 35px Verdana;
+    border-bottom: 5px solid lightgray;
+    width: 90%;
+    margin: 30 0 10;
+  }
+
+  .email {
+    margin: 0;
+    font: large Verdana;
+    width: 85%;
+  }
+
+  #email {
+    margin: 0 0 15;
+    width: 85%;
+    font: medium Verdana;
+  }
+}
+
+.formulario_estandar {
+  width: 50%;
+  display: grid;
+  align-items: center;
+  grid-template:
+    "label-id label-id id id id" auto
+    "label-nombre label-nombre nombre nombre nombre" auto
+    "label-email label-email email email email" auto
+    ". . . . ." 10px
+    ". submit submit submit ." 20px / 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 1em;
+
+  label {
+    justify-self: center;
+    font: large Verdana;
+  }
+
+  input {
+    padding: 0.5em;
+    text-align: center;
+    font: medium Verdana;
+  }
+
+  #submit {
+    background-color: gray;
+    border-radius: 10px;
+  }
+}
+
+.ocultar {
+  display: none;
+}

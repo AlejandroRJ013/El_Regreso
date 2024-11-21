@@ -1,1 +1,50 @@
-<p>pag-put works!</p>
+<div class="texto_buscador">
+  <p>Ingrese el ID del usuario para actualizarlo</p>
+  <div class="buscador">
+    <input
+      type="number"
+      id="userId"
+      name="userId"
+      list="userIds"
+      #userIdInput
+      (keydown)="onKeyDown($event)"
+    />
+    <datalist id="userIds">
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+      <option value="4"></option>
+    </datalist>
+
+    <button (click)="recogerInputBuscar()">
+      <img src="lupa.png" alt="Lupa" />
+    </button>
+  </div>
+</div>
+
+<div class="formulario_imagen">
+  <img src="usuario_chess.png" alt="Foto predeterminada de usuario" />
+  <form class="formulario_estandar" (ngSubmit)="actualizarUsuario()">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" [value]="userVisible.id" readonly />
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      #nombreInput
+      [value]="userVisible.nombre"
+      required
+    />
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      #emailInput
+      [value]="userVisible.email"
+      required
+    />
+    <input type="submit" id="submit" value="Actualizar usuario" />
+  </form>
+</div>

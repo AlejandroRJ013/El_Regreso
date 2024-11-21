@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { User } from '../interface/user';
-import { CreateUser } from '../interface/createUser';
 
 @Injectable({
   providedIn: 'root',
@@ -36,9 +35,9 @@ export class UserService {
     return this.http.get<number>(`${this.apiUrl}/next-id`);
   }
 
-  createUser(createUser: CreateUser): Observable<User> {
+  createUser(user: User): Observable<User> {
     return this.http
-      .post<User>(this.apiUrl, createUser)
+      .post<User>(this.apiUrl, user)
       .pipe(tap(() => this.fetchUsers().subscribe()));
   }
 

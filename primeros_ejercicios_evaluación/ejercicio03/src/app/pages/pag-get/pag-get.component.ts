@@ -1,13 +1,13 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { User } from '../../interface/user';
 import { UserService } from '../../services/user.service';
+import { User } from '../../interface/user';
 
 @Component({
   selector: 'app-pag-get',
   standalone: true,
   imports: [],
   templateUrl: './pag-get.component.html',
-  styleUrl: './pag-get.component.css',
+  styleUrls: ['./pag-get.component.css', '../../app.component.css'],
 })
 export class PagGetComponent {
   @ViewChild('userIdInput', { static: true })

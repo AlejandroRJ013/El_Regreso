@@ -1,0 +1,33 @@
+.texto_buscador {
+  text-align: center;
+  font: bold large Verdana;
+  padding-bottom: 1em;
+  border-bottom: 1px solid;
+  .buscador {
+    width: 40%;
+
+    input {
+      width: 80%;
+    }
+
+    button {
+      width: 20%;
+      background-color: lightgray;
+    }
+  }
+}
+
+.formulario_imagen {
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 22em;
+  }
+}
+
+#submit {
+  margin-top: 20px;
+}

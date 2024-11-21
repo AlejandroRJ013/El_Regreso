@@ -1,1 +1,43 @@
-<p>pag-del works!</p>
+<div class="body_LR">
+  <div class="izq">
+    <aside>
+      <p>Ingrese el ID del usuario para buscarlo</p>
+      <div class="buscador">
+        <input
+          type="number"
+          id="userId"
+          name="userId"
+          list="userIds"
+          #userIdInput
+          (keydown)="onKeyDown($event)"
+        />
+        <datalist id="userIds">
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+        </datalist>
+
+        <button (click)="recogerInputBuscar()">
+          <img src="lupa.png" alt="Lupa" />
+        </button>
+      </div>
+
+      <div
+        [ngClass]="hayUsuario ? 'boton_eliminiar' : 'ocultar '"
+        (click)="eliminarUsuario()"
+      >
+        <p>Eliminar usuario</p>
+      </div>
+    </aside>
+  </div>
+  <div class="der">
+    <div class="carta">
+      <p id="id">{{ userVisible.id }}</p>
+      <img src="usuario_chess.png" alt="Foto predeterminada de usuario" />
+      <h1 id="nombre">{{ userVisible.nombre }}</h1>
+      <h2 class="email">Dirección de correo:</h2>
+      <h2 id="email">{{ userVisible.email }}</h2>
+    </div>
+  </div>
+</div>

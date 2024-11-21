@@ -35,18 +35,17 @@
       </tr>
     </thead>
     <tbody>
-      <!-- NG FOR PARA LISTAR USUARIOS -->
       <tr *ngFor="let user of users">
         <td>{{ user.id }}</td>
         <td>{{ user.nombre }}</td>
         <td>{{ user.email }}</td>
         <td>
-          <a href="">
+          <a [routerLink]="['/actualizar-usuario', user.id]">
             <img src="actualizar.png" alt="Libreta con un lápiz" width="25" />
           </a>
         </td>
         <td>
-          <a href="">
+          <a [routerLink]="['/eliminar-usuario', user.id]">
             <img src="basura.png" alt="Bote de basura" width="25" />
           </a>
         </td>

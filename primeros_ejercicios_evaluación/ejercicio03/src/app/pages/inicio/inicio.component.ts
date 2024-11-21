@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit, OnDestroy {
   users: any[] = [];
   private usersSubscription!: Subscription;
 
-  constructor(private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.usersSubscription = this.userService
@@ -28,7 +28,14 @@ export class InicioComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Cancelar la suscripción para evitar fugas de memoria
     this.usersSubscription.unsubscribe();
+  }
+
+  pagUpdUser(id: number) {
+    alert('ID: ' + id);
+  }
+
+  pagDelUser(id: number) {
+    alert('ID: ' + id);
   }
 }
